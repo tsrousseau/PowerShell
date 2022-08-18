@@ -1,2 +1,13 @@
 # PowerShell
-Scripts designed to be run using PowerShell 5.1+
+Scripts written for PowerShell 5.1+ compatibility.
+
+## Disclaimer:
+While great lengths have been taken to be sure that these files are useful and not malicious, please proceed with caution.
+
+## Note:
+Always be sure to read the entire script to ensure that it is fully understood before running it.
+
+## Final Warning:
+I take no personal responsibility for any adverse consequences of running any of the files contained herein.
+
+Proceed at your own risk.
