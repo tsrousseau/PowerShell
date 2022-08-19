@@ -11,3 +11,18 @@ Always be sure to read the entire script to ensure that it is fully understood b
 I take no personal responsibility for any adverse consequences of running any of the files contained herein.
 
 Proceed at your own risk.
+
+---
+---
+
+## Concept Folder:
+    - Contains ideas for new scripts.  Includes pseudocode.
+
+## Development Folder:
+    - Scripts that are currently in any stage of the development process.
+
+## Production Folder:
+    - Scripts that are ready to be used, or are currently being used in day-to-day operations.
+
+## Retired Folder:
+    - Scripts that have been replaced, or are no longer used in day-to-day operations.  Mainly used as an archive.
