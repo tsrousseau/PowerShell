@@ -1,0 +1,1 @@
+Get-ADUser tsrousseau -Properties * | Export-Csv "C:\Temp\Get Single AD User.csv" -notypeinformation

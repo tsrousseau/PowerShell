@@ -1,0 +1,1 @@
+Get-ADUser -Filter * -Properties * | Export-Csv "C:\Temp\Get Multiple AD Users.csv" -NoTypeInformation
