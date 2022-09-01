@@ -6,10 +6,10 @@ Write-Host "$dateTime" -ForegroundColor Yellow
 
 Import-Module ActiveDirectory
 # Warning: this can be a lengthy process.
-# Returns all data to a CSV file.
 
 # Returns specified fields for all AD users in the domain.
-Get-ADUser -Filter * -Properties SamAccountName, EmployeeID, Enabled, Department, Description | Select-Object SamAccountName, EmployeeID, Enabled, Department, Description | Export-Csv "C:\Temp\Results - All Users and Only Specified Fields in Domain.csv" -NoTypeInformation -Append
+# Get-ADUser -Filter * -Properties SamAccountName, EmployeeID, Enabled, Department, Description | Select-Object SamAccountName, EmployeeID, Enabled, Department, Description | Export-Csv "C:\Temp\Results - All Users and Only Specified Fields in Domain.csv" -NoTypeInformation -Append
+Get-ADUser -Filter * -Properties SamAccountName, HomePhone | Select-Object SamAccountName, HomePhone | Export-Csv "C:\Temp\Results - All Users and Only Specified Fields in Domain.csv" -NoTypeInformation -Append
 
 # Add date and time to exported file.
 $filenameFormat = "Results - " + (Get-Date -Format "MM-dd-yyyy HH-mm-ss") + " - All Users and Only Specified Fields in Domain.csv"
