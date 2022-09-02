@@ -8,4 +8,4 @@ Get-ADUser tsrousseau -Properties * | Select-Object Name, SamAccountName, Depart
 Get-ADUser tsrousseau -Properties * | Select-Object *
 
 # Get certain AD properties of a specified user.  Returns data to console.
-Get-ADUser tsrousseau -Properties * | Select-Object Name, SamAccountName, EmployeeID, UserPrincipalName
+Get-ADUser wpriester -Properties * | Select-Object SamAccountName, telephoneNumber, homePhone

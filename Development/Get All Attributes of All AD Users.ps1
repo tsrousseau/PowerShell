@@ -1,8 +1,8 @@
 Clear-Host
 # Insert a start date and timestamp.
 $dateTime = Get-Date -Format "MM.dd.yyyy HH:mm:ss"
-Write-Host "Process started.  Please wait..." -ForegroundColor Yellow
-Write-Host "$dateTime" -ForegroundColor Yellow
+Write-Host "Retrieving all users and all attributes.  Please stand by..." -ForegroundColor Yellow
+Write-Host "$dateTime" -ForegroundColor Cyan
 
 Import-Module ActiveDirectory
 # Warning: this can be a lengthy process.
@@ -17,4 +17,4 @@ Rename-Item "C:\Temp\Results - All AD Users and All Fields in Domain.csv" -NewNa
 # Insert an end date and timestamp.
 $dateTime = Get-Date -Format "MM.dd.yyyy HH:mm:ss"
 Write-Host "Results retrieved.  Process finished." -ForegroundColor Green
-Write-Host "$dateTime" -ForegroundColor Green
+Write-Host "$dateTime" -ForegroundColor Cyan
