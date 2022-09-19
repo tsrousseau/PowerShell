@@ -14,5 +14,4 @@ Import-Csv ".\Source - AD Users List.csv" | ForEach-Object {Set-ADUser -Identity
 Write-Host "Results retrieved.  Process finished." -ForegroundColor Green
 
 # Insert an end date and timestamp.
-$dateTime = Get-Date -Format "MM.dd.yyyy HH:mm:ss"
 Write-Host "$dateTime" -ForegroundColor Cyan
