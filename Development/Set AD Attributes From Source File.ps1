@@ -11,7 +11,7 @@ Write-Host "$dateTime" -ForegroundColor Yellow
 # Note that even though we are updating "OfficePhone," this field actually maps to "telephoneNumber" in Active Directory.
 Import-Csv ".\Source - AD Users List.csv" | ForEach-Object {Set-ADUser -Identity $_.SamAccountName -OfficePhone $_.OfficePhone}
 
-Write-Host "Results retrieved.  Process finished." -ForegroundColor Green
+Write-Host "Active Directory attributes have been successfully updated.  Process finished." -ForegroundColor Green
 
 # Insert an end date and timestamp.
 Write-Host "$dateTime" -ForegroundColor Cyan
