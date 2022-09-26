@@ -9,7 +9,7 @@ $dateTime = Get-Date -Format "MM.dd.yyyy HH:mm:ss"
 Write-Host "$dateTime" -ForegroundColor Yellow
 
 # Returns specified fields for all AD users in the domain.
-Get-ADUser -Filter * -Properties SamAccountName, HomePhone, OfficePhone | Select-Object SamAccountName, HomePhone, OfficePhone | Export-Csv "C:\Temp\Results - All Users and Only Specified Fields in Domain.csv" -NoTypeInformation -Append
+Get-ADUser -Filter * -Properties SamAccountName, CN | Select-Object SamAccountName, CN | Export-Csv "C:\Temp\Results - All Users and Only Specified Fields in Domain.csv" -NoTypeInformation -Append
 
 # Add date and time to exported file.
 $filenameFormat = "Results - " + (Get-Date -Format "MM-dd-yyyy HH-mm-ss") + " - All Users and Only Specified Fields in Domain.csv"
@@ -19,4 +19,4 @@ Write-Host "Results retrieved.  Process finished." -ForegroundColor Green
 
 # Insert an end date and timestamp.
 $dateTime = Get-Date -Format "MM.dd.yyyy HH:mm:ss"
-Write-Host "$dateTime" -ForegroundColor Cyan
+Write-Host "$dateTime" -ForegroundColor Yellow
