@@ -1,7 +1,8 @@
+Remove-Item "C:\Temp\Results - All AD Users and All Fields in Domain.csv" -ErrorAction Ignore
 Clear-Host
 # Insert a start date and timestamp.
 $dateTime = Get-Date -Format "MM.dd.yyyy HH:mm:ss"
-Write-Host "Retrieving all users and all attributes.  Please stand by..." -ForegroundColor Yellow
+Write-Host "Retrieving all users and all available attributes.  Please stand by..." -ForegroundColor Yellow
 Write-Host "$dateTime" -ForegroundColor Cyan
 
 Import-Module ActiveDirectory

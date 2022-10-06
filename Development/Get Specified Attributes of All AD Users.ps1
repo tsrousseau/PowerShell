@@ -1,3 +1,4 @@
+Remove-Item "C:\Temp\Results - All Users and Only Specified Fields in Domain.csv" -ErrorAction Ignore
 Import-Module ActiveDirectory
 Clear-Host
 

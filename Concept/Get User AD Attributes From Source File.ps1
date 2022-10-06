@@ -1,3 +1,4 @@
+Remove-Item "C:\Temp\Results - AD User from Source File.csv"
 Clear-Host
 Write-Host "Retrieving attributes from username input CSV file.  Please stand by..." -ForegroundColor Cyan
 
