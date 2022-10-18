@@ -1,4 +1,4 @@
-Remove-Item "C:\Temp\Results - AD User from Source File.csv"
+Remove-Item "C:\Temp\Results - AD User from Source File.csv" -ErrorAction Ignore
 Clear-Host
 Write-Host "Retrieving attributes from username input CSV file.  Please stand by..." -ForegroundColor Cyan
 
@@ -10,7 +10,7 @@ Import-Module ActiveDirectory
 
 $userList = import-csv ".\Source - AD Users List.csv"
 ForEach($User in $userList){
-     Get-ADUser -Identity $user.SamAccountName -Properties * | Select-Object SamAccountName, userAccountControl, CN | Export-Csv -Append "C:\Temp\Results - AD User from Source File.csv" -NoTypeInformation
+     Get-ADUser -Identity $user.SamAccountName -Properties * | Select-Object SamAccountName, Department | Export-Csv -Append "C:\Temp\Results - AD User from Source File.csv" -NoTypeInformation
 }
 
 Write-Host "Results retrieved.  Process finished." -ForegroundColor Green
