@@ -1,0 +1,1 @@
+get-aduser	assaab -Properties * | Select-Object SamAccountName, Enabled, DisplayName | Export-Csv "C:\Temp\Results - Reviewers.csv" -NoTypeInformation -Append

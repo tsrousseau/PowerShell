@@ -7,5 +7,5 @@ $Date = Get-Date -UFormat "%Y%m%d"
 $UserList = Get-ADUser -filter * -Properties * | Where-Object { $_.passwordNeverExpires -eq "true" } |
 Select-Object SamAccountName, DisplayName, Description, Department, LastLogonDate, WhenCreated, Enabled
 
-$UserFile = "C:\Temp\Results - NonExpiring - " + $Date + ".csv"
+$UserFile = "C:\Temp\Results - NonExpiring Service Accounts - " + $Date + ".csv"
 $UserList | Export-Csv -Path $UserFile -NoTypeInformation -Encoding UTF8

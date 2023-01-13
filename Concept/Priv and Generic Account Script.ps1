@@ -16,7 +16,7 @@ $Accounts = Get-ADUser -filter * -Properties * | Where-Object {($_.employeeid -e
         $User.memberof |
             ForEach-Object {
 	            [PSCustomObject]@{
-                    SamAccountName = $User.samaccountname
+                    SamAccountName = $User.SamAccountName
 		            DisplayName = $User.DisplayName
                     Description = $user.Description
                     Department = $User.Department
