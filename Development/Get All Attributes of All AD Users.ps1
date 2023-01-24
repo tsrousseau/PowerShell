@@ -3,9 +3,9 @@ Remove-Item "C:\Temp\Results - All AD Users and All Fields in Domain.csv" -Error
 Clear-Host
 # Insert a start date and time stamp.
 $dateTime = Get-Date -Format "MM.dd.yyyy HH:mm:ss"
-Write-Host "Warning: This can be a lengthy process." -ForegroundColor Red
-Write-Host "Retrieving all users and all available attributes.  Please stand by..." -ForegroundColor Yellow
 Write-Host "$dateTime" -ForegroundColor Cyan
+Write-Host "Warning: This process will take about twenty (20) minutes to complete." -ForegroundColor Red
+Write-Host "Retrieving all users and all available attributes.  Please wait..." -ForegroundColor Yellow
 
 # Returns all AD attributes from all AD accounts in the domain.
 Get-ADUser -Filter * -Properties * | Export-Csv "C:\Temp\Results - All AD Users And All Fields In Domain.csv" -NoTypeInformation -Append
